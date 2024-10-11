@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/PHHS-AIML-Website/static/js/main.fa899fc9.js",
+    "index.html": "/PHHS-AIML-Website/index.html",
+    "main.fa899fc9.js.map": "/PHHS-AIML-Website/static/js/main.fa899fc9.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.fa899fc9.js"
+  ]
+}
