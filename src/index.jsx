@@ -207,7 +207,7 @@ const Home = () => (
       <div className="card">
         <h3>Latest and Upcoming Events</h3>
         <ul>
-          <li>First Official Meeting - TBD</li>
+          <li>First Official Meeting - October 18, 2024</li>
           <li>Officer Meeting - September 21, 2024</li>
           <li>Club Logisitics Meeting - August 17, 2024</li>
         </ul>
