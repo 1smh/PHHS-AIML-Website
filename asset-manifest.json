@@ -1,10 +1,17 @@
 {
   "files": {
-    "main.js": "/PHHS-AIML-Website/static/js/main.72c41596.js",
+    "main.css": "/PHHS-AIML-Website/static/css/main.a5f7cc2b.css",
+    "main.js": "/PHHS-AIML-Website/static/js/main.2df9f0a5.js",
+    "static/media/slick.svg": "/PHHS-AIML-Website/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/PHHS-AIML-Website/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/PHHS-AIML-Website/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/PHHS-AIML-Website/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/PHHS-AIML-Website/index.html",
-    "main.72c41596.js.map": "/PHHS-AIML-Website/static/js/main.72c41596.js.map"
+    "main.a5f7cc2b.css.map": "/PHHS-AIML-Website/static/css/main.a5f7cc2b.css.map",
+    "main.2df9f0a5.js.map": "/PHHS-AIML-Website/static/js/main.2df9f0a5.js.map"
   },
   "entrypoints": [
-    "static/js/main.72c41596.js"
+    "static/css/main.a5f7cc2b.css",
+    "static/js/main.2df9f0a5.js"
   ]
 }
