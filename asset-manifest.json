@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/PHHS-AIML-Website/static/js/main.72c41596.js",
-    "index.html": "/PHHS-AIML-Website/index.html",
-    "main.72c41596.js.map": "/PHHS-AIML-Website/static/js/main.72c41596.js.map"
+    "main.js": "/static/js/main.72c41596.js",
+    "index.html": "/index.html",
+    "main.72c41596.js.map": "/static/js/main.72c41596.js.map"
   },
   "entrypoints": [
     "static/js/main.72c41596.js"
