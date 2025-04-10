@@ -1,12 +1,14 @@
 {
   "name": "phhs-ai-ml-club",
   "version": "0.1.0",
+  "homepage": "http://www.phhsaiml.club",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
-    "lint": "next lint"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -70,6 +72,6 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.1.1"
   }
 }
