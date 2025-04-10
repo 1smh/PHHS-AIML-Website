@@ -1,7 +1,7 @@
 {
   "name": "phhs-ai-ml-club",
   "version": "0.1.0",
-  "homepage": "http://www.phhsaiml.club",
+  "homepage": "https://www.phhsaiml.club",
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -1,9 +1,9 @@
-"use client"
-
+import React from "react"
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Brain, Bot, Image as ImageIcon, MessageSquare, Camera } from "lucide-react"
+import Head from "next/head"
 
 const projects = [
   {
@@ -92,64 +92,76 @@ const getStatusVariant = (status: string): "default" | "secondary" | "outline" |
 
 export default function Projects() {
   return (
-    <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-      >
-        <motion.div variants={itemVariants} className="text-center mb-16 overflow-visible">
-          <h1 className="relative text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 glow-text-subtle pb-1">
-            Club Projects
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Explore the innovative AI and Machine Learning projects developed by our talented members.
-          </p>
-        </motion.div>
-
+    <>
+      <Head>
+        <title>Projects - PHHS AI/ML Club</title>
+        <meta name="description" content="Explore the innovative AI and machine learning projects created by PHHS AI/ML Club members." />
+      </Head>
+      <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <motion.div
+          initial="hidden"
+          animate="visible"
           variants={containerVariants}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
-          {projects.map((project) => (
-            <motion.div
-              key={project.title}
-              variants={itemVariants}
-              whileHover={{ y: -5 }}
-              className="flex"
-            >
-              <a 
-                href={project.githubLink} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-full"
+          <motion.div variants={itemVariants} className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 glow-text-subtle pb-1">
+              Our Projects
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Explore the innovative AI and machine learning projects created by our club members.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {projects.map((project) => (
+              <motion.div
+                key={project.title}
+                variants={itemVariants}
+                whileHover={{ y: -5 }}
               >
                 <Card className={cardClassName}>
                   <CardHeader>
-                    <div className="flex items-start justify-between mb-3">
-                      <project.icon className="h-8 w-8 text-blue-600 mt-1" />
-                      <Badge variant={getStatusVariant(project.status)} className="ml-auto">
+                    <div className="flex items-start justify-between">
+                      <div className="flex items-center space-x-3">
+                        {React.createElement(project.icon, { className: "h-6 w-6 text-blue-600" })}
+                        <CardTitle className="text-xl">{project.title}</CardTitle>
+                      </div>
+                      <Badge variant={getStatusVariant(project.status)}>
                         {project.status}
                       </Badge>
                     </div>
-                    <CardTitle className="text-2xl">{project.title}</CardTitle>
                   </CardHeader>
-                  <CardContent className="flex flex-col flex-grow">
-                    <p className="text-muted-foreground mb-4 flex-grow">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 pt-4 border-t border-white/20">
+                  <CardContent className="flex-grow">
+                    <p className="text-muted-foreground mb-4">{project.description}</p>
+                    <div className="flex flex-wrap gap-2 mt-auto">
                       {project.tags.map((tag) => (
-                        <Badge key={tag} variant="outline" className="text-xs bg-white/30 border-blue-200/50 text-blue-800">
+                        <Badge key={tag} variant="outline" className="bg-white/50">
                           {tag}
                         </Badge>
                       ))}
                     </div>
+                    {project.githubLink && (
+                      <div className="mt-4">
+                        <a 
+                          href={project.githubLink} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-sm text-blue-600 hover:text-blue-800 transition-colors flex items-center"
+                        >
+                          View on GitHub →
+                        </a>
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
-              </a>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </motion.div>
         </motion.div>
-      </motion.div>
-    </div>
+      </div>
+    </>
   )
 }
